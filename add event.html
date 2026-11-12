@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Event | CampusConnect</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="add-event-page">
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">C</span>
+        <span class="brand-text">Campus<strong>Connect</strong></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="featured.html">Featured</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="confirmation.html">Confirmation</a></li>
+          <li><a href="dashboard.html">Organizer</a></li>
+          <li><a href="add event.html">Add Event</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-accent header-cta" href="login.html">Student Login</a>
+    </div>
+  </header>
+
+  <main class="add-event-main">
+    <section class="add-event-heading">
+      <p class="add-event-label">ORGANIZER PANEL</p>
+      <h1>Add a New Event</h1>
+      <p>Fill in the details below to create your campus event.</p>
+    </section>
+
+    <section class="add-event-card">
+      <form id="add-event-form">
+        <div class="add-event-form-grid">
+          <div class="add-event-field">
+            <label for="event-name">Event Name *</label>
+            <input type="text" id="event-name" name="event_name"
+              placeholder="Enter event name" required>
+          </div>
+
+          <div class="add-event-field">
+            <label for="event-category">Event Category *</label>
+            <select id="event-category" name="category" required>
+              <option value="">Select category</option>
+              <option value="Technical">Technical</option>
+              <option value="Cultural">Cultural</option>
+              <option value="Sports">Sports</option>
+              <option value="Workshop">Workshop</option>
+              <option value="Seminar">Seminar</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="add-event-field">
+            <label for="event-date">Event Date *</label>
+            <input type="date" id="event-date" name="event_date" required>
+          </div>
+
+          <div class="add-event-field">
+            <label for="event-time">Event Time *</label>
+            <input type="time" id="event-time" name="event_time" required>
+          </div>
+
+          <div class="add-event-field">
+            <label for="event-venue">Venue *</label>
+            <input type="text" id="event-venue" name="venue"
+              placeholder="Enter event venue" required>
+          </div>
+
+          <div class="add-event-field">
+            <label for="event-capacity">Maximum Participants</label>
+            <input type="number" id="event-capacity" name="capacity"
+              min="1" placeholder="Enter participant limit">
+          </div>
+
+          <div class="add-event-field add-event-full">
+            <label for="event-image">Event Image URL</label>
+            <input type="url" id="event-image" name="image_url"
+              placeholder="https://example.com/image.jpg">
+          </div>
+
+          <div class="add-event-field add-event-full">
+            <label for="event-description">Event Description *</label>
+            <textarea id="event-description" name="description" rows="5"
+              placeholder="Describe your event..." required></textarea>
+          </div>
+        </div>
+
+        <div class="add-event-actions">
+          <a href="dashboard.html" class="add-event-cancel">Cancel</a>
+          <button type="submit" class="add-event-submit">Submit Event</button>
+        </div>
+      </form>
+    </section>
+
+    <p class="add-event-note">
+      * Required fields: Please ensure all the details are correct before submitting the form.
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© CampusConnect | Campus Event Management Portal</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

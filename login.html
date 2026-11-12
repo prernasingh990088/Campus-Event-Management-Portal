@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusConnect | Login</title>
+  <meta name="description" content="CampusConnect campus event management and registration portal.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">C</span>
+        <span class="brand-text">Campus<strong>Connect</strong></span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="featured.html">Featured</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="confirmation.html">Confirmation</a></li>
+          <li><a href="dashboard.html">Organizers</a></li>
+          <li><a href="add event.html">Add Event</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-accent header-cta" href="login.html">Student Login</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section section-tint" id="login">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow eyebrow-dark">Welcome back</p>
+          <h2>Log in to CampusConnect</h2>
+          <p class="section-lead">Use your college email and password to manage your registrations.</p>
+        </div>
+
+        <div class="login-wrap">
+          <form action="#" class="reg-form" id="login-form" method="post">
+            <fieldset class="role-pick">
+              <div class="role-options">
+                <input checked id="role-student" name="role" type="radio" value="student">
+                <label for="role-student">Student</label>
+                <input id="role-organizer" name="role" type="radio" value="organizer">
+                <label for="role-organizer">Organizer</label>
+              </div>
+            </fieldset>
+
+            <div class="login-fields">
+              <div class="field">
+                <label for="login-email">College email <span class="req">*</span></label>
+                <input autocomplete="email" id="login-email" name="email"
+                  placeholder="name@student.example.edu" required type="email">
+              </div>
+              <div class="field">
+                <label for="login-password">Password <span class="req">*</span></label>
+                <input autocomplete="current-password" id="login-password"
+                  name="password" placeholder="Enter your password" required type="password">
+              </div>
+            </div>
+
+            <div class="login-row">
+              <div class="check">
+                <input id="remember" name="remember" type="checkbox">
+                <label for="remember">Keep me logged in</label>
+              </div>
+              <a href="#login">Forgot password?</a>
+            </div>
+
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Log In</button>
+            <p class="login-alt">New to CampusConnect? <a href="register.html">Register for an event</a></p>
+          </form>
+
+          <aside class="side-note login-help">
+            <h3>Need help?</h3>
+            <ul class="ticks">
+              <li>Use the email address your college gave you.</li>
+              <li>Organizers log in with their Student Activities Office account.</li>
+            </ul>
+            <p class="fineprint">Still stuck? Email
+              <a href="mailto:events@campusconnect.example.edu">events@campusconnect.example.edu</a>
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand brand-light" href="index.html">
+          <span class="brand-mark">C</span>
+          <span class="brand-text">Campus<strong>Connect</strong></span>
+        </a>
+        <p class="footer-about">The one place to discover, register for and manage campus events.</p>
+      </div>
+      <nav aria-labelledby="footer-links-title">
+        <h2 id="footer-links-title">Useful links</h2>
+        <ul>
+          <li><a href="events.html">Upcoming events</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="confirmation.html">Sample confirmation slip</a></li>
+          <li><a href="dashboard.html">Organizer dashboard</a></li>
+        </ul>
+      </nav>
+      <section aria-labelledby="footer-contact-title">
+        <h2 id="footer-contact-title">Contact</h2>
+        <address>
+          Student Activities Office<br>
+          Room 204, Student Union Building<br>
+          Horizon State University Campus<br>
+          <a href="mailto:events@campusconnect.example.edu">events@campusconnect.example.edu</a><br>
+          Phone: +91 00000 00000<br>
+          Mon–Fri, 9:00 AM – 5:00 PM
+        </address>
+      </section>
+    </div>
+    <div class="container footer-bottom">
+      <p>Project by:</p>
+      <div>
+        <a href="#">Harshit Verma</a> |
+        <a href="#">Prerna Singh</a> |
+        <a href="#">Saniya Ansari</a>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

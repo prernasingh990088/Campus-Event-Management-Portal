@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusConnect | Registration</title>
+  <meta name="description" content="CampusConnect campus event management and registration portal.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">C</span>
+        <span class="brand-text">Campus<strong>Connect</strong></span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="featured.html">Featured</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="confirmation.html">Confirmation</a></li>
+          <li><a href="dashboard.html">Organizers</a></li>
+          <li><a href="add event.html">Add Event</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-accent header-cta" href="login.html">Student Login</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section" id="register">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow eyebrow-dark">Registration</p>
+          <h2>Reserve your seat</h2>
+          <p class="section-lead">
+            Fill in your details below. Fields marked with
+            <span class="req">*</span> are required.
+          </p>
+        </div>
+
+        <div class="form-layout">
+          <form action="confirmation.html" class="reg-form" id="reg-form" method="get">
+            <fieldset>
+              <legend>Student details</legend>
+              <div class="field-grid">
+                <div class="field">
+                  <label for="full-name">Full name <span class="req">*</span></label>
+                  <input id="full-name" name="full-name" type="text"
+                    placeholder="e.g. Ananya Kapoor" autocomplete="name" required>
+                </div>
+                <div class="field">
+                  <label for="student-id">Student ID <span class="req">*</span></label>
+                  <input id="student-id" name="student-id" type="text"
+                    placeholder="e.g. 24CS1087" required>
+                </div>
+                <div class="field">
+                  <label for="email">College email <span class="req">*</span></label>
+                  <input id="email" name="email" type="email"
+                    placeholder="name@student.example.edu" autocomplete="email" required>
+                </div>
+                <div class="field">
+                  <label for="phone">Phone number</label>
+                  <input id="phone" name="phone" type="tel"
+                    placeholder="Optional" autocomplete="tel">
+                </div>
+                <div class="field">
+                  <label for="department">Department <span class="req">*</span></label>
+                  <select id="department" name="department" required>
+                    <option value="">Select department</option>
+                    <option>Computer Science &amp; Engineering</option>
+                    <option>Electronics &amp; Communication</option>
+                    <option>Mechanical Engineering</option>
+                    <option>Business Administration</option>
+                    <option>Arts &amp; Humanities</option>
+                    <option>Sciences</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="year">Year of study <span class="req">*</span></label>
+                  <select id="year" name="year" required>
+                    <option value="">Select year</option>
+                    <option>1st year</option>
+                    <option>2nd year</option>
+                    <option>3rd year</option>
+                    <option>4th year</option>
+                    <option>Postgraduate</option>
+                  </select>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Event selection</legend>
+              <div class="field-grid">
+                <div class="field field-wide">
+                  <label for="event-select">Event <span class="req">*</span></label>
+                  <select id="event-select" name="event" required>
+                    <option value="">Choose an event</option>
+                    <option>Tarang 2026: Annual College Fest (Nov 20–22)</option>
+                    <option>Intro to Machine Learning with Python (Nov 7)</option>
+                    <option>Careers in Sustainable Energy (Nov 12)</option>
+                    <option selected>CodeSprint 24-Hour Hackathon (Nov 14–15)</option>
+                    <option>Inter-College Debate Championship (Nov 19)</option>
+                    <option disabled>Photography Walk & amp; Editing Masterclass (Full)</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="team-name">Team name</label>
+                  <input id="team-name" name="team-name" type="text"
+                    placeholder="Only for team events">
+                </div>
+                <div class="field">
+                  <label for="team-size">Team size</label>
+                  <select id="team-size" name="team-size">
+                    <option value="">Not applicable</option>
+                    <option>3 members</option>
+                    <option>4 members</option>
+                  </select>
+                </div>
+                <div class="field field-wide">
+                  <label for="notes">Accessibility or dietary needs</label>
+                  <textarea id="notes" name="notes" rows="3"
+                    placeholder="Let the organizers know how they can support you"></textarea>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="check">
+              <input id="consent" name="consent" type="checkbox" required>
+              <label for="consent">
+                I confirm my details are correct and I agree to follow the campus
+                event code of conduct. <span class="req">*</span>
+              </label>
+            </div>
+
+            <button class="btn btn-primary btn-lg" type="submit">Submit Registration</button>
+            <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+          </form>
+
+          <aside class="side-note">
+            <h3>Before you register</h3>
+            <ul class="ticks">
+              <li>Keep your student ID card handy for check-in.</li>
+              <li>Seats are allocated in the order registrations arrive.</li>
+              <li>Full events offer a waitlist. You'll be told if a seat opens.</li>
+              <li>You can cancel up to 24 hours before an event.</li>
+            </ul>
+            <p class="fineprint">
+              Need help? Email
+              <a href="mailto:events@campusconnect.example.edu">events@campusconnect.example.edu</a>
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand brand-light" href="index.html">
+          <span class="brand-mark">C</span>
+          <span class="brand-text">Campus<strong>Connect</strong></span>
+        </a>
+        <p class="footer-about">The one place to discover, register for and manage campus events.</p>
+      </div>
+      <nav aria-labelledby="footer-links-title">
+        <h2 id="footer-links-title">Useful links</h2>
+        <ul>
+          <li><a href="events.html">Upcoming events</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="confirmation.html">Sample confirmation slip</a></li>
+          <li><a href="dashboard.html">Organizer dashboard</a></li>
+        </ul>
+      </nav>
+      <section aria-labelledby="footer-contact-title">
+        <h2 id="footer-contact-title">Contact</h2>
+        <address>
+          Student Activities Office<br>
+          Room 204, Student Union Building<br>
+          Horizon State University Campus<br>
+          <a href="mailto:events@campusconnect.example.edu">events@campusconnect.example.edu</a><br>
+          Phone: +91 9865-5248-02<br>
+          Mon–Fri, 9:00 AM – 5:00 PM
+        </address>
+      </section>
+    </div>
+    <div class="container footer-bottom">
+      <p>Project by:</p>
+      <div>
+        <a href="#">Harshit Verma</a> |
+        <a href="#">Prerna Singh</a> |
+        <a href="#">Saniya Ansari</a>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusConnect | Organizer Dashboard</title>
+  <meta name="description" content="CampusConnect campus event management and registration portal.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">C</span>
+        <span class="brand-text">Campus<strong>Connect</strong></span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="featured.html">Featured</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="confirmation.html">Confirmation</a></li>
+          <li><a href="dashboard.html">Organizers</a></li>
+          <li><a href="add event.html">Add Event</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-accent header-cta" href="login.html">Student Login</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section" id="dashboard">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow eyebrow-dark">For organizers</p>
+          <h2>Dashboard preview</h2>
+        </div>
+
+        <div class="dash">
+          <div class="dash-bar">
+            <p><strong>Organizer Console</strong> · Student Activities Office</p>
+            <span class="seat-chip ok">Record Data</span>
+          </div>
+
+          <ul class="stat-grid" aria-label="Summary statistics">
+            <li>
+              <span class="stat-icon">🎟</span>
+              <strong id="active-events">6</strong>
+              <span>Active events</span>
+            </li>
+            <li>
+              <span class="stat-icon">👥</span>
+              <strong id="total-regs">1,223</strong>
+              <span>Total registrations</span>
+            </li>
+            <li>
+              <span class="stat-icon">💺</span>
+              <strong>577</strong>
+              <span>Seats remaining</span>
+            </li>
+            <li>
+              <span class="stat-icon">⏳</span>
+              <strong>18</strong>
+              <span>On waitlists</span>
+            </li>
+          </ul>
+
+          <h3 class="table-title" id="events-table-title">Events &amp; capacity</h3>
+          <div class="table-wrap" role="region" aria-labelledby="events-table-title" tabindex="0">
+            <table>
+              <thead>
+                <tr>
+                  <th>Event</th>
+                  <th>Date</th>
+                  <th>Registered</th>
+                  <th>Capacity</th>
+                  <th>Fill level</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="reg-body">
+                <tr>
+                  <th>Intro to Machine Learning</th>
+                  <td>Nov 7</td>
+                  <td>46</td>
+                  <td>60</td>
+                  <td><div class="meter meter-sm fill-77 is-low"><span></span></div></td>
+                  <td><span class="seat-chip low">Filling fast</span></td>
+                </tr>
+                <tr>
+                  <th>Careers in Sustainable Energy</th>
+                  <td>Nov 12</td>
+                  <td>120</td>
+                  <td>300</td>
+                  <td><div class="meter meter-sm fill-40"><span></span></div></td>
+                  <td><span class="seat-chip ok">Open</span></td>
+                </tr>
+                <tr>
+                  <th>CodeSprint Hackathon</th>
+                  <td>Nov 14–15</td>
+                  <td>114</td>
+                  <td>120</td>
+                  <td><div class="meter meter-sm fill-95 is-low"><span></span></div></td>
+                  <td><span class="seat-chip low">Almost full</span></td>
+                </tr>
+                <tr>
+                  <th>Inter-College Debate</th>
+                  <td>Nov 19</td>
+                  <td>45</td>
+                  <td>80</td>
+                  <td><div class="meter meter-sm fill-56"><span></span></div></td>
+                  <td><span class="seat-chip ok">Open</span></td>
+                </tr>
+                <tr>
+                  <th>Tarang 2026 College Fest</th>
+                  <td>Nov 20–22</td>
+                  <td>858</td>
+                  <td>1200</td>
+                  <td><div class="meter meter-sm fill-72"><span></span></div></td>
+                  <td><span class="seat-chip ok">Open</span></td>
+                </tr>
+                <tr>
+                  <th>Photography Masterclass</th>
+                  <td>Nov 21</td>
+                  <td>40</td>
+                  <td>40</td>
+                  <td><div class="meter meter-sm fill-100 is-full"><span></span></div></td>
+                  <td><span class="seat-chip full">Full</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="table-title" id="people-table-title">Recent registrations</h3>
+          <div class="table-wrap" role="region" aria-labelledby="people-table-title" tabindex="0">
+            <table>
+              <thead>
+                <tr>
+                  <th>Participant</th>
+                  <th>Student ID</th>
+                  <th>Event</th>
+                  <th>Registered on</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              
+              <tbody id="recent-reg-body">
+  <tr>
+    <th>Harshit Verma</th>
+    <td>24CS1087</td>
+    <td>CodeSprint Hackathon</td>
+    <td>Oct 26</td>
+    <td><span class="seat-chip ok">Confirmed</span></td>
+  </tr>
+
+  <tr>
+    <th>Prerna Singh</th>
+    <td>23EC0452</td>
+    <td>Intro to Machine Learning</td>
+    <td>Oct 25</td>
+    <td><span class="seat-chip ok">Confirmed</span></td>
+  </tr>
+
+  <tr>
+    <th>Saniya Ansari</th>
+    <td>25BA0219</td>
+    <td>Inter-College Debate</td>
+    <td>Oct 25</td>
+    <td><span class="seat-chip pending">Pending review</span></td>
+  </tr>
+
+  <tr>
+    <th>Dhairya Gupta</th>
+    <td>22ME0733</td>
+    <td>Photography Masterclass</td>
+    <td>Oct 24</td>
+    <td><span class="seat-chip full">Waitlisted</span></td>
+  </tr>
+
+  <tr>
+    <th>Madhavi Mam</th>
+    <td>24AH0108</td>
+    <td>Tarang 2026 College Fest</td>
+    <td>Oct 24</td>
+    <td><span class="seat-chip ok">Confirmed</span></td>
+  </tr>
+</tbody>
+
+              <!-- <tbody id="recent-reg-body"></tbody>
+                <tr>
+                  <th>Harshit Verma</th>
+                  <td>24CS1087</td>
+                  <td>CodeSprint Hackathon</td>
+                  <td>Oct 26</td>
+                  <td><span class="seat-chip ok">Confirmed</span></td>
+                </tr>
+                <tr>
+                  <th>Prerna Singh</th>
+                  <td>23EC0452</td>
+                  <td>Intro to Machine Learning</td>
+                  <td>Oct 25</td>
+                  <td><span class="seat-chip ok">Confirmed</span></td>
+                </tr>
+                <tr>
+                  <th>Saniya Ansari</th>
+                  <td>25BA0219</td>
+                  <td>Inter-College Debate</td>
+                  <td>Oct 25</td>
+                  <td><span class="seat-chip pending">Pending review</span></td>
+                </tr>
+                <tr>
+                  <th>Dhairya Gupta</th>
+                  <td>22ME0733</td>
+                  <td>Photography Masterclass</td>
+                  <td>Oct 24</td>
+                  <td><span class="seat-chip full">Waitlisted</span></td>
+                </tr>
+                <tr>
+                  <th>Madhavi Mam</th>
+                  <td>24AH0108</td>
+                  <td>Tarang 2026 College Fest</td>
+                  <td>Oct 24</td>
+                  <td><span class="seat-chip ok">Confirmed</span></td>
+                </tr>
+              </tbody> -->
+            </table>
+          </div>
+        </div>
+        <section class="section" id="entry-verification">
+    <div class="container">
+        <div class="section-head">
+            <p class="eyebrow eyebrow-dark">Organizer Tool</p>
+            <h2>Verify Digital Entry Pass</h2>
+            <p class="section-lead">
+                Enter the QR pass code to verify a student's registration.
+            </p>
+        </div>
+
+        <form id="verify-pass-form" class="reg-form">
+
+            <label for="pass-code">QR Pass Code</label>
+
+            <input
+                type="text"
+                id="pass-code"
+                placeholder="Example: CC-123456789"
+                required
+            >
+
+            <button type="submit" class="btn btn-primary">
+                Verify Entry
+            </button>
+
+            <p id="verification-result" aria-live="polite"></p>
+
+        </form>
+        </div>
+        </section>
+        
+<section class="section section-tint" id="organizer-feedback">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow eyebrow-dark">Student Reviews</p>
+      <h2>Event Feedback Dashboard</h2>
+      <p class="section-lead">
+        View student ratings and feedback.
+      </p>
+    </div>
+
+    <div class="stat-grid">
+      <div>
+        <strong id="feedback-count">0</strong>
+        <span>Total Feedback</span>
+      </div>
+
+      <div>
+        <strong id="average-rating">0.0 / 5</strong>
+        <span>Average Rating</span>
+      </div>
+    </div>
+
+    <h3 class="table-title">Student Feedback</h3>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Student</th>
+            <th>Event</th>
+            <th>Rating</th>
+            <th>Feedback</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+
+        <tbody id="feedback-list">
+          <tr>
+            <td colspan="5">No feedback submitted yet.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+        <div class="hero-actions" style="margin-top: 24px;">
+          <a href="add event.html" class="btn btn-primary">Add New Event</a>
+          <a href="events.html" class="btn btn-outline">View All Events</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand brand-light" href="index.html">
+          <span class="brand-mark">C</span>
+          <span class="brand-text">Campus<strong>Connect</strong></span>
+        </a>
+        <p class="footer-about">The one place to discover, register for and manage campus events.</p>
+      </div>
+      <nav aria-labelledby="footer-links-title">
+        <h2 id="footer-links-title">Useful links</h2>
+        <ul>
+          <li><a href="events.html">Upcoming events</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="confirmation.html">Confirmation slip</a></li>
+          <li><a href="dashboard.html">Organizer dashboard</a></li>
+        </ul>
+      </nav>
+      <section aria-labelledby="footer-contact-title">
+        <h2 id="footer-contact-title">Contact</h2>
+        <address>
+          Student Activities Office<br>
+          Room 204, Student Union Building<br>
+          Horizon State University Campus<br>
+          <a href="mailto:events@campusconnect.example.edu">events@campusconnect.example.edu</a><br>
+          Phone: +91 00000 00000<br>
+          Mon–Fri, 9:00 AM – 5:00 PM
+        </address>
+      </section>
+    </div>
+    <div class="container footer-bottom">
+      <p>Project by:</p>
+      <div>
+        <a href="#">Harshit Verma</a> |
+        <a href="#">Prerna Singh</a> |
+        <a href="#">Saniya Ansari</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

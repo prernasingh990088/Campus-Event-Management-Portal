@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusConnect | Confirmation Slip</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">C</span>
+        <span class="brand-text">Campus<strong>Connect</strong></span>
+      </a>
+      <nav class="main-nav" aria-label="Primary"> 
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="featured.html">Featured</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="confirmation.html">Confirmation</a></li>
+          <li><a href="dashboard.html">Organizers</a></li>
+          <li><a href="add event.html">Add Event</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section section-tint">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow eyebrow-dark">Registration</p>
+          <h1>Your Registration Confirmation</h1>
+          <p class="section-lead">
+            This is a sample confirmation slip for the CampusConnect Event Management Portal.
+          </p>
+        </div>
+
+        <article class="slip">
+          <header class="slip-head">
+            <div class="brand brand-light">
+              <span class="brand-mark">C</span>
+              <span class="brand-text">Campus<strong>Connect</strong></span>
+            </div>
+            <div class="slip-title">
+              <p>Registration Confirmation</p>
+              <strong>Ref. CC-2026-004217</strong>
+            </div>
+          </header>
+
+          <!-- <div class="slip-body">
+            <p class="slip-status">✔ Sample Confirmation</p>
+            <h2>CodeSprint 24-Hour Hackathon</h2>
+            <p>
+              Thank you for your interest in participating in our campus event.
+              We appreciate your interest.
+            </p>
+
+            <dl class="slip-grid">
+              <div><dt>Student Name</dt><dd>Student Name</dd></div>
+              <div><dt>Student ID</dt><dd>24CS1087</dd></div>
+              <div><dt>Email</dt><dd>student@example.edu</dd></div>
+              <div><dt>Department</dt><dd>Computer Science &amp; Engineering</dd></div>
+              <div><dt>Year of Study</dt><dd>3rd Year</dd></div>
+              <div><dt>Event</dt><dd>CodeSprint 24-Hour Hackathon</dd></div>
+              <div><dt>Event Date</dt><dd>November 14–15, 2026</dd></div>
+              <div><dt>Venue</dt><dd>Innovation Hub, Block C</dd></div>
+              <div><dt>Registration Reference</dt><dd>CC-2026-004217</dd></div>
+              <div><dt>Registration Fee</dt><dd>Free</dd></div>
+            </dl>
+          </div> -->
+          <div class="slip-body">
+
+            <p class="slip-status" id="slip-status">
+            ✔ Sample Confirmation
+            </p>
+
+            <h2 id="slip-event">CodeSprint 24-Hour Hackathon</h2>
+
+            <p>
+            Thank you for registering for this campus event.
+            Your registration details are given below.
+            </p>
+
+            <dl class="slip-grid">
+
+            <div>
+            <dt>Student Name</dt>
+            <dd id="slip-name">Student Name</dd>
+            </div>
+
+            <div>
+                <dt>Student ID</dt>
+                <dd id="slip-student-id">Student ID</dd>
+            </div>
+
+            <div>
+                <dt>Email</dt>
+                <dd id="slip-email">Student Email</dd>
+            </div>
+
+    <div>
+      <dt>Department</dt>
+      <dd id="slip-department">Department</dd>
+    </div>
+
+    <div>
+      <dt>Year of Study</dt>
+      <dd id="slip-year">Year</dd>
+    </div>
+
+    <div>
+      <dt>Event</dt>
+      <dd id="slip-event-copy">Event Name</dd>
+    </div>
+
+    <div>
+      <dt>Registration Reference</dt>
+      <dd id="slip-reference">Registration Reference</dd>
+    </div>
+
+    <div>
+      <dt>Registration Fee</dt>
+      <dd>Free</dd>
+    </div>
+
+  </dl>
+</div>
+
+          <div class="slip-divider"></div>
+
+          <footer class="slip-foot">
+            <div class="important-notices">
+              <p><strong>⚠️ Important Guidelines for Attendees:</strong></p>
+              <ul>
+                <li>🪪 <strong>Bring your student ID card</strong> to the venue for mandatory verification at entry.</li>
+                <li>📧 <strong>Check your registered email</strong> for specific organizer instructions.</li>
+                <li>⏰ <strong>Arrive 30 minutes early</strong> before the official start time.</li>
+                <li>💻 <strong>Bring your own laptop</strong> along with chargers.</li>
+                <li>❌ <strong>Registration is non-transferable.</strong></li>
+              </ul>
+            </div>
+            <!-- <div class="barcode" role="img" aria-label="Sample barcode graphic"></div> -->
+            <div class="qr-pass-section">
+                <h3>Digital Entry Pass</h3>
+                <div id="registration-qr"></div>
+                <p>Scan this QR code to get your entry pass code.</p>
+                <strong id="qr-pass-code"></strong>
+            </div>
+        </footer>
+        </article>
+
+        
+<section class="section" id="event-feedback">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow eyebrow-dark">Your Experience</p>
+      <h2>Event Feedback & Rating</h2>
+      <p class="section-lead">
+        Share your experience after attending the event.
+      </p>
+    </div>
+
+    <form id="feedback-form" class="reg-form">
+      <label for="feedback-rating">Rate Your Experience</label>
+      <select id="feedback-rating" required>
+        <option value="">Select your rating</option>
+        <option value="5">★★★★★ - Excellent</option>
+        <option value="4">★★★★ - Very Good</option>
+        <option value="3">★★★ - Good</option>
+        <option value="2">★★ - Average</option>
+        <option value="1">★ - Needs Improvement</option>
+      </select>
+
+      <label for="feedback-comment">Your Feedback</label>
+      <textarea
+        id="feedback-comment"
+        rows="4"
+        placeholder="Share your experience..."
+        required
+        maxlength="500"
+      ></textarea>
+
+      <button type="submit" class="btn btn-primary">
+        Submit Feedback
+      </button>
+
+      <p id="feedback-message" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+
+        <div class="hero-actions" style="margin-top: 24px;">
+          <a class="btn btn-primary" href="index.html">Back to Home</a>
+          <a class="btn btn-outline" href="events.html">Browse Events</a>
+          <a class="btn btn-outline" href="register.html">Register for an Event</a>
+          <button class="btn btn-accent" type="button" onclick="window.print()">
+            Print Confirmation
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand brand-light" href="index.html">
+          <span class="brand-mark">C</span>
+          <span class="brand-text">Campus<strong>Connect</strong></span>
+        </a>
+        <p class="footer-about">The one place to discover, register for and manage campus events.</p>
+      </div>
+      <nav aria-labelledby="footer-links-title">
+        <h2 id="footer-links-title">Useful Links</h2>
+        <ul>
+          <li><a href="events.html">Upcoming Events</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="confirmation.html">Confirmation Slip</a></li>
+          <li><a href="dashboard.html">Organizer Dashboard</a></li>
+        </ul>
+      </nav>
+      <section aria-labelledby="footer-contact-title">
+        <h2 id="footer-contact-title">Contact</h2>
+        <address>
+          Student Activities Office<br>
+          Room 204, Student Union Building<br>
+          Horizon State University Campus<br>
+          <a href="mailto:events@campusconnect.example.edu">events@campusconnect.example.edu</a><br>
+          Phone: +91 00000 00000<br>
+          Mon–Fri, 9:00 AM – 5:00 PM
+        </address>
+      </section>
+    </div>
+    <div class="container footer-bottom">
+      <p>Project by:</p>
+      <div>
+        <a href="#">Harshit Verma</a> |
+        <a href="#">Prerna Singh</a> |
+        <a href="#">Saniya Ansari</a>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

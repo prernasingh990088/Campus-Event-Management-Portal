@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusConnect | Events</title>
+  <meta name="description" content="CampusConnect campus event management and registration portal.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">C</span>
+        <span class="brand-text">Campus<strong>Connect</strong></span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="featured.html">Featured</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="confirmation.html">Confirmation</a></li>
+          <li><a href="dashboard.html">Organizers</a></li>
+          <li><a href="add event.html">Add Event</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-accent header-cta" href="login.html">Student Login</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section" id="events">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow eyebrow-dark">Upcoming events</p>
+          <h2>What's happening on campus</h2>
+          <p class="section-lead">Search by name or pick a category. Seat bars show how full each event is.</p>
+        </div>
+
+        <div class="toolbar">
+          <form class="search" role="search" action="#events">
+            <label class="sr-only" for="event-search">Search events</label>
+            <span class="search-icon">🔍</span>
+            <input id="event-search" name="q" type="search"
+              placeholder="Search events, venues or topics...">
+            <button class="btn btn-primary" type="button">Search</button>
+          </form>
+
+          <ul class="chips" aria-label="Filter events by category">
+            <li><button class="chip" type="button" aria-pressed="true">All</button></li>
+            <li><button class="chip chip-cultural" type="button" aria-pressed="false">Cultural</button></li>
+            <li><button class="chip chip-workshop" type="button" aria-pressed="false">Workshops</button></li>
+            <li><button class="chip chip-seminar" type="button" aria-pressed="false">Seminars</button></li>
+            <li><button class="chip chip-competition" type="button" aria-pressed="false">Competitions</button></li>
+          </ul>
+        </div>
+
+        <!-- <div class="filter-buttons">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="cultural">Cultural</button>
+            <button class="filter-btn" data-category="workshop">Workshops</button>
+            <button class="filter-btn" data-category="seminar">Seminars</button>
+            <button class="filter-btn" data-category="competition">Competitions</button>
+        </div> -->
+
+    <p id="no-results" hidden>No events found!</p>
+        <div class="card-grid">
+          <article class="event-card cat-competition">
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="badge">Competition</span>
+                <span class="seat-chip low">6 seats left</span>
+              </div>
+              <h3>CodeSprint 24-Hour Hackathon</h3>
+              <ul class="meta">
+                <li>📅 Sat–Sun, Nov 14–15, 2026</li>
+                <li>🕒 Starts 10:00 AM Saturday</li>
+                <li>📍 Innovation Hub, Block C</li>
+              </ul>
+              <p class="desc">Teams build a working prototype that tackles a campus problem. Mentors, meals and prizes included.</p>
+              <p class="audience"><strong>Open to:</strong> Teams of 3–4, any branch</p>
+              <div class="capacity">
+                <div class="meter fill-95 is-low" role="img" aria-label="95 percent full"><span></span></div>
+                <p>114 of 120 seats booked</p>
+              </div>
+            </div>
+            <div class="card-actions">
+              <a class="btn btn-outline" href="featured.html">View Details</a>
+              <a class="btn btn-primary" href="register.html">Register</a>
+            </div>
+          </article>
+
+          <article class="event-card cat-cultural">
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="badge">Cultural Fest</span>
+                <span class="seat-chip ok">342 seats left</span>
+              </div>
+              <h3>Tarang 2026: Annual College Fest</h3>
+              <ul class="meta">
+                <li>📅 Fri–Sun, Nov 20–22, 2026</li>
+                <li>🕒 10:00 AM onwards</li>
+                <li>📍 Main Quadrangle &amp; Open Air Theatre</li>
+              </ul>
+              <p class="desc">Three days of live music, dance, stand-up, food stalls and art installations created by student clubs.</p>
+              <p class="audience"><strong>Open to:</strong> All enrolled students (2 guest passes each)</p>
+              <div class="capacity">
+                <div class="meter fill-72" role="img" aria-label="72 percent full"><span></span></div>
+                <p>858 of 1,200 seats booked</p>
+              </div>
+            </div>
+            <div class="card-actions">
+              <a class="btn btn-outline" href="featured.html">View Details</a>
+              <a class="btn btn-primary" href="register.html">Register</a>
+            </div>
+          </article>
+
+          <article class="event-card cat-workshop">
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="badge">Workshop</span>
+                <span class="seat-chip low">14 seats left</span>
+              </div>
+              <h3>Intro to Machine Learning with Python</h3>
+              <ul class="meta">
+                <li>📅 Sat, Nov 7, 2026</li>
+                <li>🕒 10:00 AM – 4:00 PM</li>
+                <li>📍 Computer Science Lab 3, Block B</li>
+              </ul>
+              <p class="desc">Build and evaluate your first classification model in a guided, hands-on session. Bring a laptop.</p>
+              <p class="audience"><strong>Open to:</strong> 2nd–4th year CS, IT &amp; ECE students</p>
+              <div class="capacity">
+                <div class="meter fill-77 is-low" role="img" aria-label="77 percent full"><span></span></div>
+                <p>46 of 60 seats booked</p>
+              </div>
+            </div>
+            <div class="card-actions">
+              <a class="btn btn-outline" href="featured.html">View Details</a>
+              <a class="btn btn-primary" href="register.html">Register</a>
+            </div>
+          </article>
+
+          <article class="event-card cat-seminar">
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="badge">Seminar</span>
+                <span class="seat-chip ok">180 seats left</span>
+              </div>
+              <h3>Careers in Sustainable Energy</h3>
+              <ul class="meta">
+                <li>📅 Thu, Nov 12, 2026</li>
+                <li>🕒 3:00 PM – 5:00 PM</li>
+                <li>📍 Main Auditorium</li>
+              </ul>
+              <p class="desc">Industry speakers share career paths in solar, wind and grid technology, followed by a Q&amp;A panel.</p>
+              <p class="audience"><strong>Open to:</strong> All students and faculty</p>
+              <div class="capacity">
+                <div class="meter fill-40" role="img" aria-label="40 percent full"><span></span></div>
+                <p>120 of 300 seats booked</p>
+              </div>
+            </div>
+            <div class="card-actions">
+              <a class="btn btn-outline" href="featured.html">View Details</a>
+              <a class="btn btn-primary" href="register.html">Register</a>
+            </div>
+          </article>
+
+          <article class="event-card cat-competition">
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="badge">Competition</span>
+                <span class="seat-chip ok">35 seats left</span>
+              </div>
+              <h3>Inter-College Debate Championship</h3>
+              <ul class="meta">
+                <li>📅 Thu, Nov 19, 2026</li>
+                <li>🕒 9:30 AM – 4:30 PM</li>
+                <li>📍 Seminar Hall B</li>
+              </ul>
+              <p class="desc">Parliamentary-style rounds on current affairs, judged by faculty and alumni. Certificates for all speakers.</p>
+              <p class="audience"><strong>Open to:</strong> Undergraduate students, individual entry</p>
+              <div class="capacity">
+                <div class="meter fill-56" role="img" aria-label="56 percent full"><span></span></div>
+                <p>45 of 80 seats booked</p>
+              </div>
+            </div>
+            <div class="card-actions">
+              <a class="btn btn-outline" href="featured.html">View Details</a>
+              <a class="btn btn-primary" href="register.html">Register</a>
+            </div>
+          </article>
+
+          <article class="event-card cat-workshop">
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="badge">Workshop</span>
+                <span class="seat-chip full">Full · waitlist</span>
+              </div>
+              <h3>Photography Walk &amp; Editing Masterclass</h3>
+              <ul class="meta">
+                <li>📅 Sat, Nov 21, 2026</li>
+                <li>🕒 7:30 AM – 12:00 PM</li>
+                <li>📍 Botanical Garden &amp; Media Lab</li>
+              </ul>
+              <p class="desc">Shoot golden-hour photos around campus, then learn colour grading and retouching with a professional.</p>
+              <p class="audience"><strong>Open to:</strong> All students, any experience level</p>
+              <div class="capacity">
+                <div class="meter fill-100 is-full" role="img" aria-label="100 percent full"><span></span></div>
+                <p>40 of 40 seats booked</p>
+              </div>
+            </div>
+            <div class="card-actions">
+              <a class="btn btn-outline" href="featured.html">View Details</a>
+              <a class="btn btn-outline" href="register.html">Join Waitlist</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand brand-light" href="index.html">
+          <span class="brand-mark">C</span>
+          <span class="brand-text">Campus<strong>Connect</strong></span>
+        </a>
+        <p class="footer-about">The one place to discover, register for and manage campus events.</p>
+      </div>
+      <nav aria-labelledby="footer-links-title">
+        <h2 id="footer-links-title">Useful links</h2>
+        <ul>
+          <li><a href="events.html">Upcoming events</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="confirmation.html">Sample confirmation slip</a></li>
+          <li><a href="dashboard.html">Organizer dashboard</a></li>
+        </ul>
+      </nav>
+      <section aria-labelledby="footer-contact-title">
+        <h2 id="footer-contact-title">Contact</h2>
+        <address>
+          Student Activities Office<br>
+          Room 204, Student Union Block-26<br>
+          Horizon State University Campus<br>
+          <a href="mailto:events@campusconnect.example.edu">events@campusconnect.example.edu</a><br>
+          Phone: +91 85474 25485<br>
+          Mon–Fri, 9:00 AM – 5:00 PM
+        </address>
+      </section>
+    </div>
+    <div class="container footer-bottom">
+      <p>Project by:</p>
+      <div>
+        <a href="#">Harshit Verma</a> |
+        <a href="#">Prerna Singh</a> |
+        <a href="#">Saniya Ansari</a>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
